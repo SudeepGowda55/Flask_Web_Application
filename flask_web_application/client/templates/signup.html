@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %}
+{% block content %}
+<form action="/signup" method="post">
+    <h3 class="m-10 text-4xl font-bold">Sign Up</h3>
+    <div class="bg-green-100 flex flex-col">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="border border-black" placeholder="Enter Your Name">
+    </div>
+    <div class="bg-green-100 flex flex-col">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" class="border border-black" placeholder="Enter Your Email">
+    </div>
+    <div class="bg-green-100 flex flex-col">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="border border-black" placeholder="Enter the Password">
+    </div>
+    <div class="bg-green-100 flex flex-col">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="border border-black" placeholder="ReEnter the Password">
+    </div>
+    <button class="bg-blue-800 m-3 w-[6vw] h-[4vh] text-white" type="submit">Submit</button>
+</form>
+{%endblock%}

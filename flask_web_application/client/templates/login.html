@@ -1,6 +1,15 @@
-{% extends "base.html" %} {% block title %}Login{% endblock %} 
+{% extends "base.html" %} {% block title %}Login{% endblock %}
 {% block content %}
-    <h1> Please Enter your Credit Card Details </h1>
-    <label for="input">Hi, I am Mr Robot</label>
-    <input type="text">
+<form action="/login" method="post">
+    <h3 class="m-10 text-4xl font-bold">Sign Up</h3>
+    <div class="bg-green-100 flex flex-col">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" class="border border-black" placeholder="Enter Email">
+    </div>
+    <div class="bg-green-100 flex flex-col">
+        <label for="email">Password</label>
+        <input type="password" name="password" class="border border-black" placeholder="Enter Password">
+    </div>
+    <button class="bg-blue-800 m-3 w-[6vw] h-[4vh] text-white" type="submit">Login</button>
+</form>
 {% endblock %}

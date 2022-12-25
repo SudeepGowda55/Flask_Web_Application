@@ -17,11 +17,22 @@
         </div>
         <div class="flex flex-row space-x-8 h-[5vh] px-[3vw]">
             <a href="/login">Login</a>
-            <a href="/sign-up"> Sign Up</a>
+            <a href="/signup"> Sign Up</a>
             <a href="/logout">Logout</a>
             <a href="/">Home</a>
         </div>
     </nav>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for message in messages %}
+        <div role="alert">
+            {{messages}}
+            <button type="button">Close</button>
+        </div>
+        {% endfor %}
+        {% endif %}
+    {% endwith %}
+
     <div>
         {% block content %} {%endblock%}
     </div>
